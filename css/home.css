@@ -1,0 +1,439 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: 'Nunito';
+}
+
+body{
+    background-image: linear-gradient(to bottom, #fff, #fff);
+}
+
+/*SCROLL-BAR*/
+
+body::-webkit-scrollbar{
+    background-color: #000000;
+    width: 10px;
+    height: 0px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
+body::-webkit-scrollbar-thumb{
+    background: linear-gradient(to bottom, #603512, #754517, #89561c, #9d6820, #b07b24, #bc8b2d, #c89c37, #d4ad42, #ddbe55, #e7cf68, #f0e17c, #faf290, #faf290, #f0e17c, #e7cf68, #ddbe55, #d4ad42, #c89c37, #bc8b2d, #b07b24, #9d6820, #89561c, #754517, #603512);
+    height: 0px;
+}
+
+/*HEADER*/
+
+header{
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    transition: background-color 500ms ease;
+}
+
+.header-scroll{
+    background-color: #000000;
+}
+
+.header-scroll ul{
+    background-color: #000000;
+}
+
+.header-content{
+    max-width: 1100px;
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.logo{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    width: 20%;
+}
+
+.menu a{
+    font-size: 1.125rem;
+    background: linear-gradient(to bottom, #603512, #754517, #89561c, #9d6820, #b07b24, #bc8b2d, #c89c37, #d4ad42, #ddbe55, #e7cf68, #f0e17c, #faf290, #faf290, #f0e17c, #e7cf68, #ddbe55, #d4ad42, #c89c37, #bc8b2d, #b07b24, #9d6820, #89561c, #754517, #603512);  
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.menu i{
+    margin-left: 5px;
+}
+
+.menu{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu > ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+}
+
+.menu > ul > li{
+    width: 100%;
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+.menu > ul > li > a{
+    display: block;
+    padding: 30px 0px;
+}
+
+.menu > ul > li > ul{
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 84px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 500ms ease;
+}
+
+.menu > ul > li:hover > ul{
+    visibility: visible;
+    opacity: 1;
+    box-shadow: 2px 0px 2px -2px #bc6722, -2px 0px 2px -2px #bc6722, 0 2px 2px -2px #bc6722;
+}
+
+.menu > ul > li > ul > li:hover{
+    background-color: #5B3924;
+}
+
+.menu > ul > li > ul > li{
+    width: 100%;
+    position: relative;
+}
+
+.menu > ul > li > ul > li > a{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.menu > ul > li > ul > li > ul{
+    width: 100%;
+    position: absolute;
+    left: 100%;
+    top: 0px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 500ms ease;
+}
+
+.menu > ul > li > ul > li:hover > ul{
+    visibility: visible;
+    opacity: 1;
+    box-shadow: 2px 0px 2px -2px #bc6722, -2px 0px 2px -2px #bc6722, 0 2px 2px -2px #bc6722;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.menu > ul > li > ul > li > ul > li:hover{
+    background-color: #5B3924;
+}
+
+.menu > ul > li > ul > li > ul > li > a{
+    display: block;
+    width: 100%;
+    padding: 10px 0px;
+    backdrop-filter: blur(10px);
+}
+
+/*BIENVENIDA*/
+
+.main-container{
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(../img/assets/hombre-guapo-cortando-barba-salon-peluqueria.jpg);
+    background-color: rgb(15, 15, 15);
+    background-blend-mode: soft-light;
+    background-size: cover;
+    background-position: center center;
+}
+
+.bienvenida{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bienvenida h1{
+    font-family: 'Lobster';
+    font-size: 4.375rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    background: linear-gradient(to bottom, #603512, #754517, #89561c, #9d6820, #b07b24, #bc8b2d, #c89c37, #d4ad42, #ddbe55, #e7cf68, #f0e17c, #faf290, #faf290, #f0e17c, #e7cf68, #ddbe55, #d4ad42, #c89c37, #bc8b2d, #b07b24, #9d6820, #89561c, #754517, #603512);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bienvenida h2{
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+    color: #fff;
+}
+
+.btn-recorrido{
+    background-image: linear-gradient(to bottom, #bc6722, #bf7022, #c27822, #c48123, #c68a25, #cb962e, #d0a138, #d4ad42, #ddbe55, #e7cf68, #f0e17c, #faf290, #faf290, #f0e17c, #e7cf68, #ddbe55, #d4ad42, #d0a138, #cb962e, #c68a25, #c48123, #c27822, #bf7022, #bc6722);
+    border: 2px solid black;
+    padding: 1.25rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: box-shadow .3s ease;
+}
+
+.btn-recorrido:hover{
+    box-shadow: 0 0 30px 0 #bc6722;
+}
+
+.img-principal{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-img-principal{
+    width: 75%;
+    background: linear-gradient(to bottom, #603512, #754517, #89561c, #9d6820, #b07b24, #bc8b2d, #c89c37, #d4ad42, #ddbe55, #e7cf68, #f0e17c, #faf290, #faf290, #f0e17c, #e7cf68, #ddbe55, #d4ad42, #c89c37, #bc8b2d, #b07b24, #9d6820, #89561c, #754517, #603512);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.container-img-principal img{
+    width: 100%;
+    position: relative;
+    top: 5px;
+}
+
+/*NUESTROS SERVICIOS*/
+
+.our-services-container{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/assets/arreglo-herramientas-peluqueria.jpg);
+    background-color: rgb(15, 15, 15);
+    background-blend-mode: soft-light;
+    background-size: cover;
+    background-position: center center;
+    padding: 0;
+}
+
+.our-services{
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+    position: relative;
+}
+
+.btn-next-travel{
+    position: absolute;
+    right: 50px;
+    top: 100px;
+}
+
+.btn-back-travel{
+    position: absolute;
+    right: 150px;
+    top: 100px;
+}
+
+.our-services-title{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.our-services-title h2{
+    font-size: 3.125rem;
+    font-weight: 800;
+    text-align: center;
+    background: linear-gradient(to bottom, #603512, #754517, #89561c, #9d6820, #b07b24, #bc8b2d, #c89c37, #d4ad42, #ddbe55, #e7cf68, #f0e17c, #faf290, #faf290, #f0e17c, #e7cf68, #ddbe55, #d4ad42, #c89c37, #bc8b2d, #b07b24, #9d6820, #89561c, #754517, #603512);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+
+.our-services-items{
+    width: 100%;
+    height: fit-content;
+    padding: 50px 0px 20px 0px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #000000;
+    border-radius: 50px;
+}
+
+.our-services-items h3{
+    width: 100%;
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.item{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.item svg{
+    margin-bottom: 20px;
+}
+
+.item h3{
+    text-align: center;
+    font-size: 1.25rem;
+    background: linear-gradient(to bottom, #603512, #754517, #89561c, #9d6820, #b07b24, #bc8b2d, #c89c37, #d4ad42, #ddbe55, #e7cf68, #f0e17c, #faf290, #faf290, #f0e17c, #e7cf68, #ddbe55, #d4ad42, #c89c37, #bc8b2d, #b07b24, #9d6820, #89561c, #754517, #603512);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.item:last-child h3{
+    margin-left: 1.25rem;
+}
+
+/*RELLENAR SVG'S DE DORADO*/
+
+  .fill-gradient {
+    fill: url(#goldenGradient);
+  }
+  #goldenGradient {
+    stop {
+      offset: 0%;
+      stop-color: #BC6722;
+    }
+    stop {
+      offset: 100%;
+      stop-color: #BC6722;
+    }
+  }
+
+
+/*NUESTRAS INSTALACIONES*/
+
+.our-instalations-container{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/assets/sillas-vintage-peluqueria.jpg);
+    background-color: rgb(15, 15, 15);
+    background-blend-mode: soft-light;
+    background-size: cover;
+    background-position: center center;
+    padding: 0;
+}
+
+.our-instalations{
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+
+.our-instalations-title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.our-instalations-title h2{
+    font-size: 3.125rem;
+    font-weight: 800;
+    text-align: center;
+    background: linear-gradient(to bottom, #603512, #754517, #89561c, #9d6820, #b07b24, #bc8b2d, #c89c37, #d4ad42, #ddbe55, #e7cf68, #f0e17c, #faf290, #faf290, #f0e17c, #e7cf68, #ddbe55, #d4ad42, #c89c37, #bc8b2d, #b07b24, #9d6820, #89561c, #754517, #603512);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+
+
+/*RESPONSIVE (BETA)*/
+
+  @media screen and (max-width: 1100px){
+    *{
+        font-size: 14px;
+    }
+  }
+
+  @media screen and (max-width: 920px) {
+    *{
+        font-size: 13px;
+    }
+
+    .our-services-items{
+        padding: 50px 20px 20px 20px;
+    }
+
+    .item{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    *{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    *{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    *{
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    *{
+        font-size: 7px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    *{
+        font-size: 5px;
+    }
+}
+
